@@ -227,6 +227,7 @@ Then a hook callback object could be defined and passed to the socket:
     ...
 
 *Note*: when using `phx-hook`, a unique DOM ID must always be set.
+*Note*: remember that unless `phx-update="ignore"` is specified, DOM updates from client side hooks will be overwritten upon re-render which may result in lost changes e.g. when integrating a client side text editor.
 
 For integration with client-side libraries which require a broader access to full
 DOM management, the `LiveSocket` constructor accepts a `dom` option with an
